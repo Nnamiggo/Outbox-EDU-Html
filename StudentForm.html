@@ -1,0 +1,112 @@
+<!DOCTYPE html5>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Student Registration</title>
+</head>
+
+<body>
+  <h1>STUDENT REGISTRATION FORM</h1>
+  <hr>
+
+  <h2>Please fill in the required information</h2>
+
+  <form class="myform" action="StudentForm.html" method="post">
+
+    <label for="fname">First name:</label>
+    <input type="text" name="Firstname" value="Please enter your first name">
+    <label for="lname">Last name:</label> <input type="text" name="Lastname" value="Please enter your last name">
+
+    <p> Select your age: <select class="age" name="studentages">
+        <option value="20">20</option>
+        <option value="21" selected>21</option>
+        <option value="22">22</option>
+      </select>
+    </P>
+
+    <p>
+      <label for="Birthdate"> Birth date:</label>
+      <input type="date" id="start" name="trip-start" value="2019-03-06" min="1990-01-01" max="2019-03-06">
+    </P>
+
+    <p>
+      <div>
+        <input type="radio" name="gender" value="Female" checked>
+        <label for="female">Female</label>
+      </div>
+
+      <div>
+        <input type="radio" name="gender" value="Male">
+        <label for="male">Male</label>
+      </div>
+
+      <div>
+        <input type="radio" name="gender" value="Other">
+        <label for="other">Other</label>
+      </div>
+    </P>
+
+    <p>
+      <label for="email">Enter your e-mail address:</label>
+      <input type="email" id="email" pattern=".+@*.com" size="30" required>
+    </P>
+
+    <div> <label for="phonenumber">Telephone:</label>
+      <input type="tel" name="phone_num" id="phone_num" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}">
+    </div>
+
+    <p><label for="biography">Biography:</label>
+      <input style=" vertical-align: text-top; background-color: grey; color: white; height: 400px; width: 400px;" type="text" name="biography" value="Write a short biography about yourself">
+    </p>
+
+    <div>
+      <label for="height">Select your height:</label> <br />
+      <label for="sliderbegining">0</label><input type="range" min="1" max="10" value="5" id="myheight"><label for="sliderend">10</label>
+    </div>
+    <hr>
+    <div>
+      <h2>Application information</h2>
+      <label for="graduated">Graduated_in:</label>
+      <select name="graduation_year">
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019" selected>2019</option>
+      </select>
+      <input type="submit">
+
+      <p>
+        <label for="pls">Choose your prefered Language</label>
+        <input list="pls" name="pls">
+        <datalist id="pls">
+          <option value="Python">
+          <option value="Java">
+          <option value="JavaScript">
+          <option value="C#">
+          <option value="C++">
+        </datalist>
+      </P>
+      <p>
+        <label for="academic_doc">Upload your recent academic document:</label>
+
+        <input type="file" id="academic_doc" name="academic_doc" accept="image/png, image/jpeg">
+      </p>
+
+    </div>
+    <hr>
+    <div class="submision">
+      <h2>You are ready to submit your data</h2>
+      <p>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+      </p>
+
+    </div>
+
+  </form>
+</body>
+
+</html>
